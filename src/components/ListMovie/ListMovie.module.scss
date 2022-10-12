@@ -1,0 +1,29 @@
+@use '../GlobalStyles/export' as *;
+
+.wrapper {
+    margin-top: 3rem;
+    width: 100%;
+
+    .title{
+        @include flex(center,space-between,row);
+        padding: 0 2rem;
+    }
+
+    .content{
+        width: 100%;
+        padding: 2rem;
+
+
+        .swiper-slide{
+            width: 20%;
+
+            @include tablet {
+                width: 30%;
+            }
+    
+            @include mobile {
+                width: 40%;
+            }
+        }
+    }
+}

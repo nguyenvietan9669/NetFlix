@@ -1,0 +1,56 @@
+@use '../../../components/GlobalStyles/export' as *;
+
+.wrapper {
+    // background-color: red;
+    @include flex(center,space-between,row);
+    position: fixed;
+    width: 100%;
+    height: $height-nav;
+    padding: 0 2rem;
+    z-index: 10;
+
+    .nav-left{
+        position: relative;
+        height: 100%;
+        @include flex(center,start,row);
+
+
+        .logo{
+            width: 10rem;
+        }
+    }
+
+    .nav-right{
+
+        .item {
+            margin-left: 1rem;
+            text-decoration: none;
+            color: #fff;
+            font-size: 2rem;
+            font-weight: 700;
+
+            &:hover {
+                opacity: .8;
+            }
+        }
+        .item.active{
+            border-bottom: 2px solid red;
+        }
+    }
+
+    .nav-mobile{
+        background-color: rgb(79, 79, 79);
+        padding: 1rem;
+        @include flex(start,start,column);
+        border-radius: 1rem;
+
+        .item:not(:last-child){
+            width: 100%;
+        }
+    }
+
+}
+
+.wrapper.isbackground {
+    background-color: $main-bg;
+}

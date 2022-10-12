@@ -1,0 +1,20 @@
+@use '../GlobalStyles/export' as *;
+
+.wrapper {
+    padding:.5rem 2rem;
+    color: $main-color;
+    border: none;
+    background-color: red;
+    border-radius: 2rem;
+    transition: transform .2s ease;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.outline {
+    border:1px solid $main-color;
+    background-color: transparent;
+    border-radius: 2rem;
+}

@@ -1,0 +1,23 @@
+@use '../GlobalStyles/export' as *;
+
+.wrapper{
+    display: grid;
+    grid-template-columns:repeat(auto-fill, minmax(8rem,1fr));
+    gap: 1.5rem;
+
+    @include tablet {
+        grid-template-columns:repeat(auto-fill, minmax(5rem,1fr));
+    }
+
+    @include mobile {
+        grid-template-columns:repeat(auto-fill, minmax(4rem,1fr));
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .name{
+        font-size: 80%;
+    }
+}

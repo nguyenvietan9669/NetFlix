@@ -1,0 +1,66 @@
+@use '../GlobalStyles/export' as *;
+
+
+.wrapper{
+    padding: 1rem;
+    position: relative;
+
+    .search {
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        transition: all 1s ease-in;
+
+        .icon-search{
+            width: 1.6rem;
+            transform: translateX(2rem);
+            cursor: pointer;
+        }
+
+        .input-search{
+            width: 0;
+            padding: .6rem;
+            padding-left: 2.6rem;
+            background-color: transparent;
+            color: var(--color-white);
+            border: none;
+            transition: width .5s;
+
+            &:focus {
+                width: 20rem;
+            }
+        }
+    }
+
+    .content{
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(20rem,1fr));
+        gap:2rem;
+        
+        @include tablet {
+            grid-template-columns: repeat(auto-fill,minmax(25rem,1fr));
+        }
+        @include mobile {
+            grid-template-columns: repeat(auto-fill,minmax(30rem,1fr));
+        }
+    }
+
+    .icon-loading{
+       padding: 1rem;
+       width: 100%;
+       margin: 0 auto;
+       animation-name: rotate;
+       animation-duration: 3s;
+    }
+
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

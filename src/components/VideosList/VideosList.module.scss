@@ -1,0 +1,10 @@
+@use '../GlobalStyles/export' as *;
+
+.wrapper {
+    padding: 2rem;
+    margin: 2rem;
+
+    .video-item:not(:first-child){
+        margin-top: 5rem;
+    }
+}

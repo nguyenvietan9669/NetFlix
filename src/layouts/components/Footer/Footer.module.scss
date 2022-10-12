@@ -1,0 +1,38 @@
+@use '../../../components//GlobalStyles/export' as *;
+
+
+.wrapper {
+    background-image: url('../../../assets/image/footer-bg.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include flex(center,center,column);
+    padding-bottom: 3rem;
+
+    .logo{
+        width: 20rem;
+    }
+
+    .content{
+        @include flex(start,start,row);
+        gap:3rem;
+
+        .content__menu{
+            @include flex(start,start,column);
+
+            a{
+                color: $main-color;
+                font-size: 2rem;
+                font-weight: 600;
+                
+                @include mobile{
+                    font-size: 1rem;
+                }
+
+                &:hover {
+                    color: red;
+                }
+            }
+        }
+    }
+}
